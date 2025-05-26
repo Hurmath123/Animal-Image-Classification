@@ -1,31 +1,16 @@
----
-# Animal Image Classification
+# Animal Image Classifier
 
-A deep learning web application that classifies animal images into 15 categories using a fine-tuned EfficientNetB0 model. Built with TensorFlow and Streamlit, and deployable on Hugging Face Spaces.
+A deep learning-powered web application that classifies animal images into 15 categories using a fine-tuned MobileNetV2 model. This project demonstrates the practical use of transfer learning for computer vision tasks and is deployed with a lightweight Streamlit interface.
 
----
+## Project Overview
+This project leverages MobileNetV2, a pre-trained convolutional neural network, fine-tuned on a custom animal dataset. It provides real-time predictions via an intuitive web interface, built with Streamlit and deployable on platforms like Hugging Face Spaces.
 
-## Overview
-
-This project demonstrates image classification using transfer learning. Users can upload an image, and the app predicts the animal category with a confidence score.
-
----
-
-## Features
-
-- **Transfer Learning**: EfficientNetB0 model trained on a labeled animal image dataset.
-- **Streamlit Web App**: Simple and intuitive interface for users to upload and classify images.
-- **Ready for Deployment**: Easily deployable to Hugging Face Spaces.
-
----
-
-## Supported Animal Classes
-
+## Supported Classes
 - Bear
-- Bird
+- Bird 
 - Cat
 - Cow
-- Deer
+- Deer 
 - Dog
 - Dolphin
 - Elephant
@@ -37,80 +22,56 @@ This project demonstrates image classification using transfer learning. Users ca
 - Tiger
 - Zebra
 
----
+## Tech Stack
+- **Model Architecture**: MobileNetV2 (Transfer Learning)
+- **Frameworks**: TensorFlow, Keras
+- **Frontend**: Streamlit
+- **Deployment**: Hugging Face Spaces 
+
+## Features
+- Upload `.jpg`, `.jpeg`, or `.png` images.
+- Real-time predictions with top-3 results.
+- Grad-CAM heatmap visualizations for model interpretability.
+- Bar chart of class confidence scores.
+- Clean UI with error handling and confidence alerts.
 
 ## Project Structure
 
 ```
 animal-image-classification/
-├──Dataset                         # Folder containing 15 categories of animal images
+├──Dataset                         # Folder containing 15 categories of animal images access it on [Frough11/animal_dataset](https://huggingface.co/datasets/Frough11/animal_dataset)
 ├── app.py                         # Streamlit application
-├── efficientnetb0_best.h5         # Pretrained model (EfficientNetB0)
-├── mobilenetv2_best.h5            # Optional pretrained model
+├── efficientnetb0_best.h5         # Pretrained model (EfficientNetB0)[Frough11/animal-classifier](https://huggingface.co/Frough11/animal-classifier)
 ├── ml animal classification.ipynb # Training notebook
 ├── requirements.txt               # Dependencies
 ├── Image Classification of animals.pdf  # Project summary
 └── README.md                      # Project documentation
 ```
 
----
 
-## Getting Started
+## ⚙️ Getting Started
 
-### 1. Clone the Repository
+### Run Locally
 
 ```bash
-git clone https://github.com/Hurmath123/animal-image-classifier.git
+git clone https://github.com/your-username/animal-image-classifier.git
 cd animal-image-classifier
-```
-
-### 2. Set Up a Virtual Environment
-
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-```
-
-### 3. Install Dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
-### 4. Run the App
-
-```bash
 streamlit run app.py
 ```
 
----
+## Project Demo
 
-## Deploy to Hugging Face
+![Demo](readme_resources/demo.gif)
 
-1. Go to [Hugging Face Spaces](https://huggingface.co/spaces)
-2. Click **Create new Space** → Choose **Streamlit** and **Python**
-3. Upload:
-   - `app.py`
-   - `efficientnetb0_best.h5`
-   - `requirements.txt`
+### Deploy Online
+You can deploy this app to Hugging Face Spaces by uploading the same files and selecting the Streamlit SDK.
 
-4. The app will auto-deploy once all files are uploaded.
-
----
-
-## 📁 Dataset
-
-The model was trained on [Frough11/animal_classes](https://huggingface.co/datasets/Frough11/animal_dataset), a folder-based image classification dataset.
+## Acknowledgements
+- MobileNetV2 architecture from TensorFlow Keras Applications.
+- Grad-CAM methodology for CNN interpretability.
+- Hugging Face Spaces for free app hosting.
 
 ---
 
-## Author
-Frough Hurmath S
-**Hurmath123**  
-[GitHub Profile](https://github.com/Hurmath123)
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+📌 *This project was developed as part of a machine learning portfolio to showcase image classification using transfer learning and interactive visual explanations.*
