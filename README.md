@@ -100,7 +100,7 @@ streamlit run app.py
 
 ## 📁 Dataset
 
-The model was trained on [Frough11/animal_classes](https://huggingface.co/datasets/Frough11/animal_classes), a folder-based image classification dataset.
+The model was trained on [Frough11/animal_classes](https://huggingface.co/datasets/Frough11/animal_dataset), a folder-based image classification dataset.
 
 ---
 
