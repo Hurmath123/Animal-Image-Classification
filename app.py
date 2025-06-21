@@ -70,7 +70,7 @@ uploaded_file = st.file_uploader("Upload an animal image...", type=["jpg", "jpeg
 if uploaded_file and model:
     try:
         img = Image.open(uploaded_file).convert("RGB").resize((224, 224))
-        st.image(img, caption="Uploaded Image", use_column_width=True)
+        st.image(img, caption="Uploaded Image", use_container_width=True)
 
         x = image.img_to_array(img)
         x = preprocess_input(x)
