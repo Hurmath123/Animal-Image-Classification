@@ -4,6 +4,4 @@ tensorflow
 opencv-python   
 matplotlib   
 scikit-learn    
-Pillow         
-tqdm         
-flask           
+         
