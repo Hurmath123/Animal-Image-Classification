@@ -1,5 +1,9 @@
-streamlit
-tensorflow
 numpy
-pillow
-requests
+pandas
+tensorflow
+opencv-python   
+matplotlib   
+scikit-learn    
+Pillow         
+tqdm         
+flask           
